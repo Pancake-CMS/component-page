@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/polymerfire/firebase-auth.html">
+        <link rel="import" href="bower_components/paper-button/paper-button.html">
+        <link rel="import" href="./component-page.html">
+    </head>
+    <body>
+        <template is="dom-bind" id="Demo">
+            <component-page></component-page>
+            <firebase-auth id="auth" provider="github" on-error="handleError">
+            </firebase-auth>
+            <paper-button on-click="handleSignIn">Sign in</paper-button>
+        </template>
+        <script>
+            Demo.handleSignIn = function() {
+                this.$.auth.signInWithPopup()
+                    .then( (response)=> {
+                        // successful authentication response here
+                        console.log(response);
+                        console.log('success full sign in');
+                    })
+                    .catch( (error)=> {
+                        // unsuccessful authentication response here
+                        console.log(error);
+                        console.log('error in sign in');
+                    });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "component-page",
+  "homepage": "https://github.com/Pancake-CMS/component-page",
+  "authors": [
+    "Prateek Jadhwani <prateekjadhwani@users.noreply.github.com>"
+  ],
+  "description": "The component page for the pancake cms project",
+  "main": "component-page.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.6.0",
+    "component-list": "pancake-cms-component-list#*",
+    "polymerfire": "firebase/polymerfire#^0.9.4",
+    "paper-button": "PolymerElements/paper-button#^1.0.12"
+  }
+}
