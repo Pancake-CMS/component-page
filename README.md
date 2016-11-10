@@ -6,4 +6,6 @@ It also lets user download a `bower.json` file that can be used to re-install th
 
 ## Installation
 
-## Usage
+```shell
+bower install --save pancake-cms-component-page
+```

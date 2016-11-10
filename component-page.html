@@ -1,26 +1,17 @@
-<link rel="import" href="bower_components/component-list/component-list.html">
-<link rel="import" href="bower_components/polymerfire/firebase-app.html">
-<link rel="import" href="bower_components/polymerfire/firebase-document.html">
-<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="../component-list/component-list.html">
+<link rel="import" href="../polymerfire/firebase-document.html">
+<link rel="import" href="../paper-button/paper-button.html">
 
 <dom-module id="component-page">
     <template>
         <style></style>
-        <firebase-app
-            auth-domain="__YOUR_AUTH_DOMAIN__"
-            database-url="__YOUR_DATABASE_URL__"
-            api-key="__YOUR_API_KEY__">
-        </firebase-app>
-
         <firebase-document
             id="doc"
-            path="/components/"
+            path="/components"
             data="{{components}}">
         </firebase-document>
 
-        <template is="dom-if" if="{{components.length > 0}}">
-            <component-list components="[[components]]"></component-list>
-        </template>
+        <component-list components="[[components]]" showcomponentinfo="true"></component-list>
 
     </template>
     <script>
@@ -30,8 +21,7 @@
             properties: {
                 components: {
                     type: Array,
-                    notify: true,
-                    value: []
+                    notify: true
                 }
             }
         });
