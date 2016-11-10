@@ -1,6 +1,7 @@
 <link rel="import" href="../component-list/component-list.html">
 <link rel="import" href="../polymerfire/firebase-document.html">
 <link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../page-links/page-links.html">
 
 <dom-module id="component-page">
     <template>
@@ -11,6 +12,7 @@
             data="{{components}}">
         </firebase-document>
 
+        <page-links></page-links>
         <component-list components="[[components]]" showcomponentinfo="true"></component-list>
 
     </template>
