@@ -1,11 +1,18 @@
 <link rel="import" href="../component-list/component-list.html">
+<link rel="import" href="../component-adder/component-adder.html">
 <link rel="import" href="../polymerfire/firebase-document.html">
 <link rel="import" href="../paper-button/paper-button.html">
 <link rel="import" href="../page-links/page-links.html">
 
 <dom-module id="component-page">
     <template>
-        <style></style>
+        <style>
+            component-adder {
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+            }
+        </style>
         <firebase-document
             id="doc"
             path="/components"
@@ -14,7 +21,7 @@
 
         <page-links></page-links>
         <component-list components="[[components]]" showcomponentinfo="true"></component-list>
-
+        <component-adder></component-adder>
     </template>
     <script>
         Polymer({

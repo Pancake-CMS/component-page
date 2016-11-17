@@ -19,6 +19,7 @@
     "component-list": "pancake-cms-component-list#*",
     "polymerfire": "firebase/polymerfire#^0.9.4",
     "paper-button": "PolymerElements/paper-button#^1.0.12",
-    "page-links": "pancake-cms-page-links#*"
+    "page-links": "pancake-cms-page-links#*",
+    "component-adder": "pancake-cms-component-adder#*"
   }
 }
