@@ -2,11 +2,20 @@
 <link rel="import" href="../component-adder/component-adder.html">
 <link rel="import" href="../polymerfire/firebase-document.html">
 <link rel="import" href="../paper-button/paper-button.html">
-<link rel="import" href="../page-links/page-links.html">
 
 <dom-module id="component-page">
     <template>
         <style>
+            :host {
+                display: none;
+            }
+            :host([active]){
+                display: block;
+            }
+            component-list {
+                margin-top: 50px;
+                --component-list--height: auto;
+            }
             component-adder {
                 position: fixed;
                 bottom: 50px;
@@ -19,7 +28,7 @@
             data="{{components}}">
         </firebase-document>
 
-        <page-links></page-links>
+
         <component-list components="[[components]]" showcomponentinfo="true"></component-list>
         <component-adder></component-adder>
     </template>
