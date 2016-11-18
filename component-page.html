@@ -2,6 +2,7 @@
 <link rel="import" href="../component-adder/component-adder.html">
 <link rel="import" href="../polymerfire/firebase-document.html">
 <link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../bower-installer/bower-installer.html">
 
 <dom-module id="component-page">
     <template>
@@ -31,6 +32,7 @@
 
         <component-list components="[[components]]" showcomponentinfo="true"></component-list>
         <component-adder></component-adder>
+        <bower-installer components="[[components]]"></bower-installer>
     </template>
     <script>
         Polymer({
