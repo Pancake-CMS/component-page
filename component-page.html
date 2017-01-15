@@ -8,10 +8,14 @@
     <template>
         <style>
             :host {
+                @apply(--layout-fullbleed);
                 display: none;
+                background: white;
             }
             :host([active]){
                 display: block;
+                @apply(--layout-horizontal);
+                @apply(--layout-vertical);
             }
             component-list {
                 margin-top: 50px;
